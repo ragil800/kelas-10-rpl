@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papan Catur 3x3</title>
+  <style>
+    .papan-catur {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      border: 2px solid #000;
+      width: fit-content;
+      margin: 20px auto;
+      position: absolute;
+      top: 100px;
+      margin-left: 500px;
+      margin-right: 500px;
+    }
+
+    .kotak {
+      width: 100px;
+      height: 100px;
+    }
+
+    .hitam {
+      background-color: brown;
+    }
+
+    .putih {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="papan-catur">
+    <!-- Baris 1 -->
+    <div class="kotak putih"></div>
+    <div class="kotak hitam"></div>
+    <div class="kotak putih"></div>
+
+    <!-- Baris 2 -->
+    <div class="kotak hitam"></div>
+    <div class="kotak putih"></div>
+    <div class="kotak hitam"></div>
+
+    <!-- Baris 3 -->
+    <div class="kotak putih"></div>
+    <div class="kotak hitam"></div>
+    <div class="kotak putih"></div>
+  </div>
+
+</body>
+</html>
+
