@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <button onclick="proses()">Proses</button>
+            <p id="hasil"></p>
+                <script>
+                    async function proses(){
+                    hasil.innerHTML='Step 1';
+                    await new Promise(r=>setTimeout(r,1000));
+                    hasil.innerHTML='Step 2';}
+                </script>
+        </body>
+    </html>
