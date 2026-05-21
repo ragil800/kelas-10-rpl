@@ -1,5 +1,0 @@
-(function(){console.log('Mulai')}) ()
-(() => console.log('Start'))()
-(function(n){console.log(n)})(5)
-(() => {let x=10; console.log(x)})()
-(function(){alert('IIFE')})()
