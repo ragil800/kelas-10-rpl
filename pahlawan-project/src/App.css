@@ -1,0 +1,151 @@
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quiz-card, .score-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #333;
+  width: 350px;
+}
+
+.img-wrapper img {
+  width: 180px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px solid #d32f2f;
+  margin: 1rem 0;
+}
+
+.options-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 12px;
+  border: 2px solid #d32f2f;
+  background: white;
+  color: #d32f2f;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #d32f2f;
+  color: white;
+}
+
+.btn-reset {
+  margin-top: 20px;
+  background: #333;
+  color: white;
+  border: none;
+}
+
+/* Tambahkan ini di App.css kamu */
+
+.alert-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 350px;
+  border: 5px solid #ff4d4d; /* Border merah */
+}
+
+.wrong-text {
+  color: #d32f2f;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: shake 0.5s; /* Efek getar */
+}
+
+/* Efek animasi getar biar makin dramatis */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Overlay Feedback */
+.feedback-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  color: white;
+  font-size: 2rem;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.bg-red {
+  background-color: rgba(211, 47, 47, 0.9); /* Merah transparan */
+}
+
+.bg-green {
+  background-color: rgba(56, 142, 60, 0.9); /* Hijau transparan */
+}
+
+/* Pastikan kartu kuis punya position relative agar overlay menempel */
+.quiz-card {
+  position: relative; /* Penting! */
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Biar tombol kelihatan mati saat loading */
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.img-wrapper img {
+  /* Agar lebar gambar mengikuti lebar kartu */
+  width: 100%; 
+  
+  /* Atur tinggi maksimal agar tidak terlalu panjang ke bawah */
+  max-height: 300px; 
+  
+  /* 'contain' memastikan seluruh gambar terlihat tanpa terpotong */
+  object-fit: contain; 
+  
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin: 1rem 0;
+  background-color: #fff; /* Tambah background putih jika gambar transparan */
+}
